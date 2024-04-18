@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Spell and Trap Cards</title>
+    <script>
+        function toggleForm(formId) {
+            var spellForm = document.getElementById('spellForm');
+            var trapForm = document.getElementById('trapForm');
+
+            if (formId === 'spell') {
+                spellForm.style.display = 'block';
+                trapForm.style.display = 'none';
+            } else if (formId === 'trap') {
+                spellForm.style.display = 'none';
+                trapForm.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="toggleForm('spell')">Insert Spell Card</button>
+    <button onclick="toggleForm('trap')">Insert Trap Card</button>
+
+    <!-- Spell Card Form -->
+    <form id="spellForm" action="Insert_Spell.php" method="post" style="display: none;">
+        <table border="0">
+            <tr><td>Spell Name</td>
+            <td><input type="text" name="Name" maxlength="30" size="30"></td></tr>
+            <tr><td>Spell Type</td>
+            <td><input type="text" name="Spell_Type" maxlength="30" size="30"></td></tr>
+            <tr><td>Effect</td>
+            <td><textarea name="Effect" rows="5" cols="40"></textarea></td></tr>
+            <tr><td><input type="submit" value="Update Database"></td></tr>
+        </table>
+    </form>
+
+    <!-- Trap Card Form -->
+    <form id="trapForm" action="Insert_Trap.php" method="post" style="display: none;">
+        <table border="0">
+            <tr><td>Trap Name</td>
+            <td><input type="text" name="Name" maxlength="30" size="30"></td></tr>
+            <tr><td>Trap Type</td>
+            <td><input type="text" name="Trap_Type" maxlength="30" size="30"></td></tr>
+            <tr><td>Effect</td>
+            <td><textarea name="Effect" rows="5" cols="40"></textarea></td></tr>
+            <tr><td><input type="submit" value="Update Database"></td></tr>
+        </table>
+    </form>
+</body>
+</html>

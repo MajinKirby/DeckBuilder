@@ -1,12 +1,68 @@
 <html>
 <head>
 <title>Insert Deck Form</title>
-</head>
+<link rel="stylesheet" href="/aULmMpAAglg6mPP_"/></head>
+<style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0394fc;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 15px;
+        }
 
+        .sidebar a {
+            display: block;
+            margin-right: 10px;
+            margin-left: 20px;
+            margin-top: 26px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            color: #555;
+        }
+
+        .dummy-content {
+            height: 2000px;
+        }
+    </style>
 <body>
+ <div class="sidebar">
+    <h2>Deckmaster</h2>
+        <a href="mainpage.php">Home</a>
+        <a href="create_review.html">Make Card Reviews</a>
+        <a href="create_comment.html">Send Feedback</a>
+        <a href="create_review.html">Make Card Reviews</a>
+        <a href="create_comment.html">Send Feedback</a>
+        <a href="Insert_Deck.html">Insert Deck</a>
+        <a href="all_mainmonsters.php">All Main Deck Monsters</a>
+        <a href="all_extramonsters.php">All Extra Deck Monsters</a>
+        <a href="all_spells.php">All Spell Cards</a>
+        <a href="all_traps.php">All Trap Cards</a>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <form action="Insert_Deck.php" method="post">
 
 <table border=0>
+<tr><td>Enter Username</td>
+<td><input type=text name=username maxlength=100 size=30><br><td>
 <tr><td>Main Monster Cards</td>
 <td><textarea name=Main_Monster rows=5 cols=40></textarea><br></td>
 <tr><td>Extra Monster Cards</td>

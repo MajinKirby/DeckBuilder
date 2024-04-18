@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Monsters Form</title>
+    <link rel="stylesheet" href="/ZwZauVjgOCQxlNAY"/>
+    <link rel="stylesheet" href="/jKuMCLFnhzgqnYUU"/>
+
+    <script>
+        function toggleForm(formId) {
+            var mainMonsterForm = document.getElementById('mainMonsterForm');
+            var extraMonsterForm = document.getElementById('extraMonsterForm');
+
+            if (formId === 'mainMonster') {
+                mainMonsterForm.style.display = 'block';
+                extraMonsterForm.style.display = 'none';
+            } else if (formId === 'extraMonster') {
+                mainMonsterForm.style.display = 'none';
+                extraMonsterForm.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="toggleForm('mainMonster')">Insert Monster</button>
+    <button onclick="toggleForm('extraMonster')">Insert Extra Monster</button>
+
+    <!-- Main Monster Form -->
+    <form id="mainMonsterForm" action="Insert_MainMonster.php" method="post" style="display: none;">
+        <table border="0">
+            <tr><td>Monster Name</td>
+            <td><input type="text" name="Name" maxlength="30" size="30"></td></tr>
+            <tr><td>Level</td>
+            <td><input type="text" name="Level" maxlength="30" size="30"></td></tr>
+            <tr><td>Type</td>
+            <td><input type="text" name="Type" maxlength="30" size="30"></td></tr>
+            <tr><td>Attribute</td>
+            <td><input type="text" name="Attribute" maxlength="100" size="50"></td></tr>
+            <tr><td>Effect</td>
+            <td><textarea name="Effect" rows="5" cols="40"></textarea></td></tr>
+            <tr><td>Attack Points</td>
+            <td><input type="varchar" name="Attack" maxlength="4" size="4"></td></tr>
+            <tr><td>Defense Points</td>
+            <td><input type="varchar" name="Defense" maxlength="4" size="4"></td></tr>
+            <tr><td><input type="submit" value="Update Database"></td></tr>
+        </table>
+    </form>
+
+    <!-- Extra Monster Form -->
+    <form id="extraMonsterForm" action="Insert_ExtraMonster.php" method="post" style="display: none;">
+        <table border="0">
+            <tr><td>Monster Name</td>
+            <td><input type="text" name="Name" maxlength="30" size="30"></td></tr>
+            <tr><td>Monster Level</td>
+            <td><input type="text" name="ExtraMonster_Level" maxlength="30" size="30"></td></tr>
+            <tr><td>Extra Monster Type</td>
+            <td><input type="text" name="ExtraMonster_Type" maxlength="30" size="30"></td></tr>
+            <tr><td>Type</td>
+            <td><input type="text" name="Type" maxlength="30" size="30"></td></tr>
+            <tr><td>Attribute</td>
+            <td><input type="text" name="Attribute" maxlength="100" size="50"></td></tr>
+            <tr><td>Effect</td>
+            <td><textarea name="Effect" rows="5" cols="40"></textarea></td></tr>
+            <tr><td>Attack Points</td>
+            <td><input type="varchar" name="Attack" maxlength="4" size="4"></td></tr>
+            <tr><td>Defense Points</td>
+            <td><input type="varchar" name="Defense" maxlength="4" size="4"></td></tr>
+            <tr><td><input type="submit" value="Update Database"></td></tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>About Us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #0394fc;
+  color: white;
+  font-size: 30px;
+}
+table, th, td {
+  border:1px solid black;
+}
+.a {
+text-align:left}
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0394fc;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-right: 10px;
+            margin-left: 20px;
+            margin-top: 26px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            color: #555;
+        }
+
+        .dummy-content {
+            height: 2000px;
+        }
+</style>
+</head>
+<body>
+<div class="sidebar">
+<h2>Deckmaster</h2>
+    <a href="mainpage.php">Home</a>
+    <a href="Insert_Deck.html">Create Deck</a>
+    <a href="create_review.html">Make Card Reviews</a>
+    <a href="create_comment.html">Send Feedback</a>
+    <a href="all_mainmonsters.php">All Main Deck Monsters</a>
+    <a href="all_extramonsters.php">All Extra Deck Monsters</a>
+    <a href="all_spells.php">All Spell Cards</a>
+    <a href="all_traps.php">All Trap Cards</a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class="header">
+  <h1>How To Play</h1>
+  <p>Learn how to play Yu-Gi-Oh here, or brush up on the basics!</p>
+  <h2>Official Videos</h2>
+  <a href="https://www.yugioh-card.com/en/forbeginners/">Official Video Guides can be found here!</a>
+  <h2>However, if you'd like to learn here, we've got you covered!<h2>
+</div>
+<table style="width:100%">
+  <tr>
+    <th>Table of Contents</th>
+    <tr>
+    <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#thefield">The Field</a></td>
+    </tr>
+    <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#monstercards">Monster Cards</a></td></td>
+    <tr>
+    <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#spellcards">Spell Cards</a></td>
+    </td>
+    </tr>
+  </tr>
+</table>
+<div class="content">
+<h1 id="thefield">The Field</h1>
+  <h2>To understand how to play Yu-Gi-Oh!, you need to first know the field it’s played on. Below is what the current Yu-Gi-Oh! field looks like. Lets break it down.</h2>
+  <img src="field.PNG" alt="The Field">
+  <p>Each square is called a <strong>zone</strong>, and each zone has its purpose.</p>
+  <p>Directly above the deck is the <strong>Graveyard</strong>, sometimes abbreviated as “GY”, which is best described as the discard pile, where monster cards go once destroyed by battle or card effect, and spell/trap cards go once their effects have resolved or they are destroyed.</p>
+  <p>The <strong>bottom left zone</strong> is where the <strong>Extra Deck</strong> goes.</p>
+  <p>Directly above the Extra Deck is where you play <strong>field spells.</strong></p>
+  <p>The zones in between the Field Spell Zone and Graveyard Zone are the <strong>Monster Card Zones</strong>, sometimes known as the front row. This is where your monster cards are played.</p>
+  <p>Directly below the Monster Card Zones are the <strong>Spell & Trap Card Zones</strong>, sometimes known as the “back row”. This is where you play Trap cards and Spell cards that are not Field spells.</p>
+  <p>You will notice that the left and rightmost Spell & Trap Card Zones have a unique symbol in them.
+There are also <strong>two zones</strong>, above the Monster Card Zones. With the current catalog of cards we are using, these Zones and their purpose are irrelevant, so their purpose and functionality will be explained later.</p>
+<h2>Now that you know how the field is set up and what each zone is used for, it’s time to explain the cards themselves. </h2>
+<h1 id="monstercards">Monster Cards</h1>
+<img src="examplecard.PNG" alt="Buster Blader">
+<p>At the top we have the card’s <strong>name</strong>, in this case, we have, “Buster Blader”.</p>
+<p>Right next to the card’s name, is the card’s <strong>attribute</strong>. Buster Blader is an <strong>“Earth”</strong> attribute monster.
+
+<p>Right below the name and attribute, are some <strong>stars</strong>. These stars are the monster’s <strong>level</strong>. Buster Blader here has seven
+stars, meaning he’s a level 7 monster.</p>
+<p>Right below the card artwork is a box with more information. In the top-left corner of the box is the card’s <strong>type</strong>. In
+this case, Buster Blader is a <strong>warrior type monster</strong>.
+
+<p>An important note is that beginners often confuse type and attribute with each other. An easy way to distinguish the
+two is:</p>
+<h2>When a Card's effect specifies an <strong>attribute</strong>, the name of the attribute will be in <strong><em>all caps</strong></em>.</h2>
+<p>For example, when a
+card says, “Banish one Light and one Dark Monster from your Graveyard.” The text in the effect will say. “Banish one
+<strong>LIGHT</strong> and one <strong>DARK</strong> Monster from your GY.”</p>
+<p><br>Next to the monster’s type, there can be additional monster types. Most monsters will only ever have “Effect” written.</p>
+<p>Should a monster have nothing written after the main type, then they are classified as Normal monsters. Normal monsters
+have text in the effect box, but this text has no impact on the game state. For example:</p>
+<img src="DM.PNG" alt="Dark Magician">
+<p><strong>Dark Magician</strong> here is a normal monster with the flavor text, <strong><em>“The ultimate wizard in terms of attack and defense.”</strong></em></p>
+<img src="examplecard.PNG" alt="Buster Blader">
+<p>Going back to <strong>Buster Blader</strong>, he has the effect, <strong><em>“Gains 500 ATK for each Dragon monster your opponent controls or is in their GY.”</strong></em></p>
+<p>Finally, at the very bottom of the card are the monster’s <strong>attack and defense stats, abbreviated as ATK and DEF.</strong></p>
+<h2>Now, spell cards.</h2>
+<h1 id="spellcards">Spell Cards</h1>
+
+
+
+
+</div>
+
+</body>
+</html>

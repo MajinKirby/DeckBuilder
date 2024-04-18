@@ -1,28 +1,65 @@
 <!DOCTYPE html>
-<html lang="en'>
-	<head>
-		<link rel="stlesheet" href="style.css" type="text/css>
-		background-image:url('folder/image.gif');
-		background-size:100%;
-		background-repeat: repeat-y;
-		background-attachment: fixed;
-		height:100%;
-		width:100%;
-	</head>
-	<style>
-	
-	</style>
-	<body>
-		<header>
-			<nav id="navigation">
-				<ul>
-					<il><a href="index.php">Home</a></li>
-					<il><a href="Insert_Monsters.html">Insert Monster Cards</a></li>
-					<il><a href="Insert_ExtraMonster.html">Insert Extra Monster Cards</a></li>
-					<il><a href="Insert_Spell.html">Insert Spell Cards</a></li>
-					<il><a href="Insert_Trap.html">Insert Trap Cards</a></li>
-					<il><a href="Insert_Deck.html">Insert Deck</a></li>
-				</ul>
-			</nav>
-		</header>
-	<div id="contents">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeckMaster</title>
+    <style>
+     .header {
+            padding: 60px;
+            text-align: left;
+            background: #0394fc;
+            color: white;
+            font-size: 30px;
+        }
+        .header p {
+            margin: 10px 0;
+            font-size: 20px;
+            color: white;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+        }
+    .headersp {
+        text-align: right;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        body {
+            background-size: 100%;
+            background-repeat: repeat-y;
+            background-attachment: fixed;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+<link rel="stylesheet" href="/B7XLAP1WbHvmD_84"/></head>
+<body>
+    <div class="header">
+        <ul>
+			<h1>Welcome to DeckMaster.</h1>
+			<h2>Table of Contents:</h2>
+			<h1> Insertion Forms:</h1>
+            <p><a href="Insert_Monsters.html">Insert Monster Cards</a></p>
+            <p><a href="Insert_ExtraMonster.html">Insert Extra Monster Cards</a></p>
+            <p><a href="Insert_Spell.html">Insert Spell Cards</a></p>
+            <p><a href="Insert_Trap.html">Insert Trap Cards</a></p>
+            <p><a href="Insert_Deck.html">Insert Deck</a></p>
+			<h2>View Cards:</h2>
+            <p><a href="all_mainmonsters.php">All Main Deck Monsters</a></p>
+            <p><a href="all_extramonsters.php">All Extra Deck Monsters</a></p>
+            <p><a href="all_spells.php">All Spell Cards</a></p>
+            <p><a href="all_traps.php">All Trap Cards</a></p>
+            <br>
+        </ul>
+    <div style="text-align: right;">
+            <p><a href="About_Us.html">About Us</a></p>
+        </div>
+    </div>
+    <div style="text-align: right;">
+        <a href="logout.php" class="logout-link">Logout</a>
+    </div>
+</body>
+</html>

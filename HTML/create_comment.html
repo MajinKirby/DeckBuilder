@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0394fc;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-right: 10px;
+            margin-left: 20px;
+            margin-top: 26px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            color: #555;
+        }
+
+        .dummy-content {
+            height: 2000px;
+        }
+</style>
+</head>
+<title>Comment Form</title>
+<link rel="stylesheet" href="/ZwZauVjgOCQxlNAY"/></head>
+
+<body>
+<div class="sidebar">
+<h2>Deckmaster</h2>
+    <a href="mainpage.php">Home</a>
+    <a href="Insert_Deck.html">Create Deck</a>
+    <a href="create_review.html">Make Card Reviews</a>
+    <a href="all_mainmonsters.php">All Main Deck Monsters</a>
+    <a href="all_extramonsters.php">All Extra Deck Monsters</a>
+    <a href="all_spells.php">All Spell Cards</a>
+    <a href="all_traps.php">All Trap Cards</a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form action="insert_comment.php" method="post">
+
+<table border=0>
+<tr><td>Username</td>
+<td><input type=text name=username maxlength=30 size=30><br></td></tr>
+<tr><td>Comment</td>
+<td><textarea name=comment rows=5 cols=60></textarea><br></td>
+<tr><td>
+<input type=submit value="Update Database"></td></tr>
+</table>
+
+</form>
+</body>
+</html>
