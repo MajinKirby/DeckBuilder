@@ -44,7 +44,7 @@ $query = "INSERT INTO Trap_Cards (Name, Trap_Type, Effect)
 $result = $conn->query($query);
 
 if ($result) {
-    echo mysqli_affected_rows($conn) . "<br>Trap added to Database.<br>";
+    echo mysqli_affected_rows($conn) . "<br><h2>Trap added to Database.</h2><br>";
 } else {
     echo "Error: " . $query . "<br>" . $conn->error;
 }
@@ -54,7 +54,10 @@ $conn->close();
 
 ?>
 
-<il><BODY VLINK="#00f835"><a href="index.php">Home</a></li>
+<il><BODY VLINK="#003ef2"><a href="mainpage.php">Home</a></li>
+<il><BODY VLINK="#003ef2"><a href="Insert_allmonsters.html">Insert Monster Cards</a></li>
+<il><BODY VLINK="#003ef2"><a href="Insert_spelltraps.html">Insert Spell & Trap Cards</a></li>
+<il><BODY VLINK="#003ef2"><a href="Insert_Deck.html">Insert Another Deck</a></li>
 
 </body>
 </html>

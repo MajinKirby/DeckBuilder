@@ -1,24 +1,61 @@
 <html>
 <head>
 <title>All Main Deck Monsters</title>
+<style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0394fc;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-right: 10px;
+            margin-left: 20px;
+            margin-top: 26px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            color: #555;
+        }
+
+        .dummy-content {
+            height: 2000px;
+        }
+</style>
 </head>
 <body>
-<ul>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="Insert_Monsters.html">Insert Monster Cards</a></li>
-    <li><a href="Insert_ExtraMonster.html">Insert Extra Monster Cards</a></li>
-    <li><a href="Insert_Spell.html">Insert Spell Cards</a></li>
-    <li><a href="Insert_Trap.html">Insert Trap Cards</a></li>
-    <li><a href="Insert_Deck.html">Insert Deck</a></li>
-    <li><a href="all_mainmonsters.php">All Main Deck Monsters</a></li>
-    <li><a href="all_extramonsters.php">All Extra Deck Monsters</a></li>
-    <li><a href="all_spells.php">All Spell Cards</a></li>
-    <li><a href="all_traps.php">All Trap Cards</a></li>
-</ul>
-
+<div class="sidebar">
+<h2>Deckmaster</h2>
+    <a href="mainpage.php">Home</a>
+    <a href="Insert_Deck.html">Create Deck</a>
+    <a href="create_review.html">Make Card Reviews</a>
+    <a href="create_comment.html">Send Feedback</a>
+    <a href="all_extramonsters.php">All Extra Deck Monsters</a>
+    <a href="all_spells.php">All Spell Cards</a>
+    <a href="all_traps.php">All Trap Cards</a>
+</div>
 
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <form action="all_mainmonsters.php" method="GET">
   <label for="search_term">Search by Name:</label>
   <input type="text" id="search_term" name="search_term">

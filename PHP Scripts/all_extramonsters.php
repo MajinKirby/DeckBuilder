@@ -1,20 +1,91 @@
 <html>
 <head>
-<title>All Main Deck Monsters</title>
+<title>All Extra Deck Monsters</title>
 </head>
 <body>
-<ul>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="Insert_Monsters.html">Insert Monster Cards</a></li>
-    <li><a href="Insert_ExtraMonster.html">Insert Extra Monster Cards</a></li>
-    <li><a href="Insert_Spell.html">Insert Spell Cards</a></li>
-    <li><a href="Insert_Trap.html">Insert Trap Cards</a></li>
-    <li><a href="Insert_Deck.html">Insert Deck</a></li>
-    <li><a href="all_mainmonsters.php">All Main Deck Monsters</a></li>
-    <li><a href="all_extramonsters.php">All Extra Deck Monsters</a></li>
-    <li><a href="all_spells.php">All Spell Cards</a></li>
-    <li><a href="all_traps.php">All Trap Cards</a></li>
-</ul>
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0394fc;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;0
+            margin-right: 10px;
+            margin-left: 20px;
+            margin-top: 26px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            color: #555;
+        }
+
+        .dummy-content {
+            height: 2000px;
+        }
+    </style>
+<style>
+        .header4 {
+            padding: 60px;
+            text-align: left;
+            background: #0394fc;
+            color: white;
+            font-size: 30px;
+        }
+        .header4 p {
+            margin: 10px 0;
+            font-size: 20px;
+            color: white;
+        }
+        .header4 a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        body {
+            background-size: 100%;
+            background-repeat: repeat-y;
+            background-attachment: fixed;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<br>
+<body>
+    <div class="sidebar">
+    <h2>Deckmaster</h2>
+        <a href="mainpage.php">Home</a>
+        <a href="Insert_Deck.html">Create Deck</a>
+        <a href="create_review.html">Make Card Reviews</a>
+        <a href="create_comment.html">Send Feedback</a>
+        <a href="all_mainmonsters.php">All Main Deck Monsters</a>
+        <a href="all_spells.php">All Spell Cards</a>
+        <a href="all_traps.php">All Trap Cards</a>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 <form action="all_extramonsters.php" method="GET">

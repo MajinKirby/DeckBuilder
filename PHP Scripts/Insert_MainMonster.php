@@ -47,15 +47,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-echo "<h1> <font color=green>Connection established.<br>";
+echo "<h1><font color=green>Connection established.</h1><br>";
 
-$query = "INSERT INTO Main_Deck_Monsters (Name, Level, Type, Attribute, Effect, Attack, Defense)
-          VALUES ('$Name', '$Level', '$Type', '$Attribute', '$Effect', '$Attack', '$Defense')";
+$query = "INSERT INTO Main_Deck_Monsters (Name, Level, Type, Attribute, Attack, Defense, Effect)
+          VALUES ('$Name', '$Level', '$Type', '$Attribute', '$Attack', '$Defense', '$Effect')";
 
 $result = $conn->query($query);
 
 if ($result) {
-    echo mysqli_affected_rows($conn) . "<br>Monster added to Database.<br>";
+    echo mysqli_affected_rows($conn) . "<br><h2>Monster added to Database.</h2><br>";
 } else {
     echo "Error: " . $query . "<br>" . $conn->error;
 }
@@ -65,7 +65,10 @@ $conn->close();
 
 ?>
 
-<il><BODY VLINK="#00f835"><a href="index.php">Home</a></li>
+<il><BODY VLINK="#003ef2"><a href="mainpage.php">Home</a></li>
+<il><BODY VLINK="#003ef2"><a href="Insert_allmonsters.html">Insert Monster Cards</a></li>
+<il><BODY VLINK="#003ef2"><a href="Insert_spelltraps.html">Insert Spell & Trap Cards</a></li>
+<il><BODY VLINK="#003ef2"><a href="Insert_Deck.html">Insert Another Deck</a></li>
 
 </body>
 </html>
