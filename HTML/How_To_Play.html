@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>About Us</title>
+<title>How to Play</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -13,14 +13,19 @@ body {
   padding: 60px;
   text-align: center;
   background: #0394fc;
-  color: white;
+  color: #ffffff;
   font-size: 30px;
 }
+.header a{
+color: #ffffff;
+}
 table, th, td {
-  border:1px solid black;
+  border:1px solid white;
 }
 .a {
-text-align:left}
+text-align:left;
+color: #ffffff;
+}
 
         .sidebar {
             position: fixed;
@@ -28,6 +33,7 @@ text-align:left}
             left: 0;
             width: 100%;
             background-color: #0394fc;
+            color: #ffffff;
             overflow-x: auto;
             overflow-y: hidden;
             white-space: nowrap;
@@ -46,16 +52,21 @@ text-align:left}
             margin-left: 20px;
             margin-top: 26px;
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
         }
 
         .sidebar a:hover {
-            color: #555;
+            color: #ffffff;
         }
 
         .dummy-content {
             height: 2000px;
         }
+        body {
+          background-color: #0371a1;
+          color: #ffffff;
+          font-family: Arial, Helvetica, sans-serif;
+          }
 </style>
 </head>
 <body>
@@ -91,6 +102,14 @@ text-align:left}
     <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#monstercards">Monster Cards</a></td></td>
     <tr>
     <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#spellcards">Spell Cards</a></td>
+    <tr>
+    <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#trapcards">Trap Cards</a></td>
+    <tr>
+    <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#extradeck">The Extra Deck & Fusion Monsters</a></td>
+    <tr>
+    <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#deck">Building Your Deck</a></td>
+    <tr>
+    <td><a href="https://deckbuilder.x10.mx/How_To_Play.html#gameplay">How to Play(For real, this time!)</a></td>
     </td>
     </tr>
   </tr>
@@ -134,9 +153,69 @@ have text in the effect box, but this text has no impact on the game state. For 
 <p>Finally, at the very bottom of the card are the monster’s <strong>attack and defense stats, abbreviated as ATK and DEF.</strong></p>
 <h2>Now, spell cards.</h2>
 <h1 id="spellcards">Spell Cards</h1>
-
-
-
+<p>Spell Cards are divided into 5 Categories, <strong>Normal, Continuous, Quick-Play, Field, and Ritual.</strong></p>
+<img src="raigeki.PNG" alt="Raigeki">
+<p><strong>Normal Spells</strong>, like Raigeki, are simple to understand. you activate them from the hand, and once they resolve their effect, they are sent to the graveyard.</p>
+<img src="messengerofpeace.PNG" alt="Messenger of Peace">
+<p><strong>Continuous Spells</strong>, like Messenger of Peace, are played onto the field and remain there until they are destroyed.</p>
+<p>An important thing to remember is that continuous spells can have their effects negated but still remain on the field.</p>
+<img src="limiterremoval.PNG" alt="Limiter Removal">
+<p><strong>Quick Play Spells</strong> are a little more complex, due to interacting with chain links and spell speeds. 
+These two aspects will be explained later, but for quick-play spells, all you need to know is that unlike other spells, quick-play spells can be activated from your hand in response to another card effect, <strong>but only during your turn</strong>. You can only activate quick-play spells on your opponent’s turn if you set them face down on the field during your turn first.</p>
+<img src="umi.PNG" alt="Umi">
+<p><strong>Field Spells</strong>, like Umi, also function differently. as stated before, they are played in their own dedicated zone, where they function similarly to continuous spells, remaining on the field until they are destroyed.</p>
+<p>Note that the effects of Umi are always present, affecting every designated monster at all times.</p>
+<img src="blackluster.PNG" alt="Black Luster Ritual">
+<p>Finally, <strong>Ritual Spells</strong>, like Black Luster Ritual, are played in conjunction with ritual monsters. Each ritual spell shares a similar effect; to ritual summon their specific ritual monster, you tribute monsters from your hand/field whose combined LEVELS <strong>equal or exeed the level of the monster they are summoning.</strong></p>
+<p><strong>Note: in order to ritual summon, you’ll need to have both a ritual spell and its designated ritual monster in your hand, unless the ritual spell states otherwise.</p></strong>
+<h1 id="trapcards">Trap Cards</h1>
+<p>Trap Cards are similar to spell cards.The key difference being that <strong>Trap Cards can not be activated directly from the hand.</strong> You must first set them facedown in the spell and trap card zone, and can not be activated on the same turn you set them.</p>
+<p>Traps are divided into 3 categories: <strong>Normal, Counter and Continuous.</strong></p>
+<img src="traphole.PNG" alt="Trap Hole">
+<p><strong>Normal Trap Cards</strong> are the most basic, you set them face down during your turn, then during any other turn you can flip them face up to activate their effect(s).</p>
+<img src="mirrorforce.PNG" alt="Mirror Force">
+<p><strong>Counter Traps</strong> are similar to normal traps, except unlike normal traps, they can only be activated in response to certain actions being taken, and the cards that can be activated in response to them are other counter traps.</p>
+<img src="ultimateoffering.PNG" alt="Ultimate Offering">
+<p>Finally, <strong>Continuous Traps</strong> are just like normal traps, but once activated they function exactly the same as continuous spells.</p>
+<h2>Now that we are done with the main deck, let’s quickly look at the extra deck.</h2>
+<h1 id="extradeck">The Extra Deck & Fusion Monsters</h1>
+<img src="flameswordsman.PNG" alt="Flame Swordsman">
+<p><strong>Fusion Monsters</strong> are nearly identical to monsters in the main deck, however they are purple, instead of yellow/brown. Also you’ll notice in the effect box, right next to the monster’s main type, is “Fusion”. this is what denotes a monster as a fusion monster.</p>
+<p>As their name may suggest, Fusion Monsters are a combination of two or more separate monsters, known as the fusion material. In this case Flame Swordsman’s fusion materials are “Flame Manipulator” and “Masaki the Legendary Swordsman”.</p>
+<img src="polymerization.PNG" alt="Polymerization">
+<p>In order to conduct a fusion summon you must have the required fusion material on the field and or in your hand, then you must play a spell card known as <strong>Polymerization.</strong></p>
+<p>Once you have successfully fusion summoned a monster to the field, the monster will function the same as any other monster on the field, being able to attack, change battle position, use its effect should it have one, and go to the Graveyard once destroyed.</p>
+<h2>Now that you know the cards, it’s time to build your deck.</h2>
+<h1 id="deck">Building Your Deck</h1>
+<p>A Yu-Gi-Oh! Deck is made up of a combination of main deck monsters, spells, and traps. 
+Your main deck must have a minimum of 40 cards and maximum of 60 cards. The Extra Deck is always optional, but should you be playing one, it may contain a maximum of 15 cards. You are also allowed a side deck of up to 15 cards. Your side deck may contain cards from both the main deck and extra deck. We’ll explain the side deck will be later in the flow of the game. One thing to know is that in all three decks, you may only have up to three copies of one card.</p>
+<img src="exampledeck.PNG", alt="Example Deck">
+<p>Now that you’ve built your deck, it’s time to learn how a typical game goes.</p>
+<h1 id="gameplay">How to Play (For real, this time!)</h1>
+<p>Once you have an opponent and have decided who goes first, you’ll start by <strong>drawing your opening hand of five cards</strong>. Once both players have their opening hands, and your life points are set to the starting value of <strong>8000</strong>, the duel begins and the player going first begins their turn.</p>
+<p>A turn in Yu-Gi-Oh! is divided into phases listed below.</p>
+<img src="turnstructure.PNG" alt="Turn Structure">
+<h2>First is the Draw Phase.</h2>
+<p> In the draw phase the player will simply draw the top card of their deck and add it to their hand. An important thing to note is that the player going first does not draw for their opening turn.</p>
+<h2>Next, the Standby Phase.</h2>
+<p>This phase is where certain card effects activate, as well as paying any maintenance costs for cards. You’ll know these effects are activated and costs are paid, in the standby phase, because the card will specifically state it.</p>
+<h2>After the standby phase, is the Main Phase 1.</h2>
+<p>This is where a majority of the primary gameplay occurs. In this phase you can normal/special or set summon monsters, activate/set spell and trap cards, and utilize monster effects. An important rule is that you can only normal summon one monster per turn.</p>
+<h2>Once you’ve made all the plays you’ve liked in the main phase, you can move onto the Battle Phase.</h2>
+<p>In the Battle Phase, you can attack with your monsters. When two monsters are battling, the monster with fewer attack points is destroyed, and the owner loses life points equal to the difference between the two monsters' attack points.</p>
+<p>When attacking a defense position monster, <strong>if the attacking monster has greater attack points than the defending monster's defense points, the defending monster is destroyed, but its owner does not lose any life points.</strong></p>
+<p>Should the defending monster have greater defense points than the attacking monster’s attack points, <strong>neither monster is destroyed but the owner of the attacking monster loses life points equal to the difference between the defending monster's defense points and the attacking monster's attack points.</strong><p>
+<p>Finally, if your opponent has now monsters on their field, <strong>you can attack their life points directly causing them to lose points equal to your monster's full attack point value.</strong> Each monster can only attack once per battle phase, and you do not have to attack if you do not wish.</p>
+<h2>Once you’ve finished with the Battle Phase, you can now move to the Main Phase 2.</h2>
+<p>The Main Phase 2 functions the same as the Main Phase 1, and exists to allow you to set up for your opponent’s turn.</p>
+<h2>Finally, once you’ve finished the Main Phase 2, you can now move to the End Phase.</h2>
+<p>Like the standby phase, nothing happens in the end phase, unless a card effect states otherwise.</p>
+<h2>Once the End Phase ends, your turn is over and your opponent’s turn begins, going in the same order as your turn.</h2>
+<h2>Now that you know how a turn in Yu-Gi-Oh! is conducted, how do you win?</h2>
+<h2>There are two ways to win.</h2>
+<p>The most common way is by <strong>reducing your opponent’s life points to 0.</strong>
+The more uncommon way is known as <strong>“decking out your opponent.”</strong> This occurs when, during your opponent’s draw phase, <strong>they have no cards remaining in their deck.</strong></p>
+<h2>Now that you know how to play Yu-Gi-Oh!, go assemble your deck, find an opponent, and prepare to duel!</h2>
 
 </div>
 
