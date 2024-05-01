@@ -10,6 +10,7 @@
             left: 0;
             width: 100%;
             background-color: #0394fc;
+            color: #ffffff;
             overflow-x: auto;
             overflow-y: hidden;
             white-space: nowrap;
@@ -28,16 +29,21 @@
             margin-left: 20px;
             margin-top: 26px;
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
         }
 
         .sidebar a:hover {
-            color: #555;
+            color: #ffffff;
         }
 
         .dummy-content {
             height: 2000px;
         }
+        body {
+          background-color: #0371a1;
+          color: #ffffff;
+          font-family: Arial, Helvetica, sans-serif;
+          }
 </style>
 <body>
 <div class="sidebar">

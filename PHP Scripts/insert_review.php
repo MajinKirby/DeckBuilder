@@ -10,7 +10,7 @@
             overflow-x: auto;
             overflow-y: hidden;
             white-space: nowrap;
-            padding: 5px;
+            padding: 15px;
             display: flex;
             flex-wrap: wrap;
         }
@@ -35,14 +35,8 @@
         .dummy-content {
             height: 2000px;
         }
-        body {
-          background-color: #0371a1;
-          color: #ffffff;
-          font-family: Arial, Helvetica, sans-serif;
-          }
     </style>
-</head>
-<title>Insert Deck</title>
+<title>Review Creation</title><link rel="stylesheet" href="/Mt0xmo6jmNlB5JJe"/>
 <body>
 <div class="sidebar">
 <h2>Deckmaster</h2>
@@ -54,25 +48,22 @@
     <a href="all_extramonsters.php">All Extra Deck Monsters</a>
     <a href="all_spells.php">All Spell Cards</a>
     <a href="all_traps.php">All Trap Cards</a>
- </div>
-
+</div>
+<br>
+<br>
 <br>
 <br>
 <br>
 <?php
 
 $username = $_POST['username'];
-$Main_Monster = $_POST['Main_Monster'];
-$Extra_Monster = $_POST['Extra_Monster'];
-$Spell = $_POST['Spell'];
-$Trap = $_POST['Trap'];
+$named_card = $_POST['named_card'];
+$review = $_POST['review'];
 
 
 if (!$username
- || !$Main_Monster
- || !$Extra_Monster
- || !$Spell
- || !$Trap)
+ || !$named_card
+ || !$review)
 {
 	echo "You have not entered all the required details.<br>"
 		."Please go back and try again.";
@@ -80,10 +71,9 @@ if (!$username
 }
 
 $username = addslashes($username);
-$Main_Monster = addslashes($Main_Monster);
-$Extra_Monster = addslashes($Extra_Monster);
-$Spell = addslashes($Spell);
-$Trap = addslashes($Trap);
+$named_card = addslashes($named_card);
+$review = addslashes($review);
+
 
 $db_host = "localhost";
 $db_username = "qbcdylpr_Decks";
@@ -97,16 +87,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-
 echo "<h1><font color=green>Connection established.<br></h1>";
 
-$query = "INSERT INTO All_Decks (username, Main_Monster, Extra_Monster, Spell, Trap)
-          VALUES ('$username','$Main_Monster', '$Extra_Monster', '$Spell', '$Trap')";
+$query = "INSERT INTO card_reviews (username, named_card, review)
+          VALUES ('$username', '$named_card', '$review')";
 
 $result = $conn->query($query);
 
 if ($result) {
-    echo mysqli_affected_rows($conn) . "<br><h2>Your deck was uploaded!</h2><br>";
+    echo mysqli_affected_rows($conn) . "<br><h2>Your review was uploaded!</h2><br>";
 } else {
     echo "Error: " . $query . "<br>" . $conn->error;
 }
@@ -116,5 +105,8 @@ $conn->close();
 
 ?>
 
+
 </body>
 </html>
+
+

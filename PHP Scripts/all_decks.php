@@ -1,6 +1,8 @@
 <html>
 <head>
-<title>All Main Deck Monsters</title>
+<title>All Decks</title>
+<link rel="stylesheet" href="/mTbDyH4GGG_mQBXu"/></head>
+<body>
 <style>
         .sidebar {
             position: fixed;
@@ -8,7 +10,6 @@
             left: 0;
             width: 100%;
             background-color: #0394fc;
-            color: #ffffff;
             overflow-x: auto;
             overflow-y: hidden;
             white-space: nowrap;
@@ -27,7 +28,7 @@
             margin-left: 20px;
             margin-top: 26px;
             text-decoration: none;
-            color: #ffffff;
+            color: #333;
         }
 
         .sidebar a:hover {
@@ -37,11 +38,12 @@
         .dummy-content {
             height: 2000px;
         }
+
         body {
-          background-color: #0371a1;
-          color: #ffffff;
-          font-family: Arial, Helvetica, sans-serif;
-          }
+            background-color: #0371a1;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 </style>
 </head>
 <body>
@@ -51,18 +53,18 @@
     <a href="Insert_Deck.html">Create Deck</a>
     <a href="create_review.html">Make Card Reviews</a>
     <a href="create_comment.html">Send Feedback</a>
+    <a href="all_mainmonsters.php">All Main Deck Monsters</a>
     <a href="all_extramonsters.php">All Extra Deck Monsters</a>
     <a href="all_spells.php">All Spell Cards</a>
     <a href="all_traps.php">All Trap Cards</a>
 </div>
-<div class "body">
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-<form action="all_mainmonsters.php" method="GET">
+<form action="all_decks.php" method="GET">
   <label for="search_term">Search by Name:</label>
   <input type="text" id="search_term" name="search_term">
   <input type="submit" value="Search">
@@ -70,9 +72,9 @@
 
 <?php
 $db_host = "localhost";
-$db_username = "qbcdylpr_cards";
+$db_username = "qbcdylpr_Decks";
 $db_password = "password";
-$db_name = "qbcdylpr_cards";
+$db_name = "qbcdylpr_Decks";
 
 // Create connection
 $connection = new mysqli($db_host, $db_username, $db_password, $db_name);
@@ -85,10 +87,10 @@ if ($connection->connect_error) {
 // If search term is provided, execute search query
 if (isset($_GET['search_term'])) {
   $search_term = $_GET['search_term'];
-  $query = "SELECT * FROM Main_Deck_Monsters WHERE Name LIKE '%$search_term%'";
+  $query = "SELECT * FROM All_Decks WHERE Name LIKE '%$search_term%'";
 } else {
   // Default query to select all rows
-  $query = "SELECT * FROM Main_Deck_Monsters";
+  $query = "SELECT * FROM All_Decks";
 }
 
 // Execute the query
@@ -102,11 +104,11 @@ if (!$result) {
 // Get the number of rows returned by the query
 $num_results = $result->num_rows;
 
-echo "<h1>Number of Main Monster cards found: " . $num_results . "</h1>";
+echo "<h1>Number of created decks found: " . $num_results . "</h1>";
 
 // Output table header
 echo "<table border='1'>";
-echo "<tr><th>Name</th><th>Level</th><th>Type</th><th>Attribute</th><th>Attack</th><th>Defense</th><th>Effect</th></tr>";
+echo "<tr><th>Username</th><th>Main Monsters</th><th>Extra Monsters</th><th>Spell Cards</th><th>Trap Cards</th></tr>";;
 
 // Loop through each row in the result set
 for ($i = 0; $i < $num_results; $i++) {
@@ -115,13 +117,11 @@ for ($i = 0; $i < $num_results; $i++) {
   
   // Output the data for the current row as a table row
   echo "<tr>";
-  echo "<td>" . htmlspecialchars($row["Name"]) . "</td>";
-  echo "<td>" . htmlspecialchars($row["Level"]) . "</td>";
-  echo "<td>" . htmlspecialchars($row["Type"]) . "</td>";
-  echo "<td>" . htmlspecialchars($row["Attribute"]) . "</td>";
-  echo "<td>" . htmlspecialchars($row["Attack"]) . "</td>";
-  echo "<td>" . htmlspecialchars($row["Defense"]) . "</td>";
-  echo "<td>" . htmlspecialchars($row["Effect"]) . "</td>";
+  echo "<td>" . htmlspecialchars($row["username"]) . "</td>";
+  echo "<td>" . htmlspecialchars($row["Main_Monster"]) . "</td>";
+  echo "<td>" . htmlspecialchars($row["Extra_Monster"]) . "</td>";
+  echo "<td>" . htmlspecialchars($row["Spell"]) . "</td>";
+  echo "<td>" . htmlspecialchars($row["Trap"]) . "</td>";
   echo "</tr>";
 }
 
@@ -131,6 +131,6 @@ echo "</table>";
 // Close connection
 $connection->close();
 ?>
-</div>
+
 </body>
 </html>

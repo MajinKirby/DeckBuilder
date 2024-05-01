@@ -1,4 +1,13 @@
 <title>DeckMaster Sign Up</title>
+<style>
+        body {
+          background-color: #0371a1;
+          color: #ffffff;
+          font-family: Arial, Helvetica, sans-serif;
+</style>
+
+<body>
+<h2>Please make a username and password!</h2>
 <?php
 session_start();
 include('config.php');

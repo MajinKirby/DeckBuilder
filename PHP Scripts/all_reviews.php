@@ -4,23 +4,41 @@
 <link rel="stylesheet" href="/mTbDyH4GGG_mQBXu"/></head>
 <body>
 <style>
-        .header {
-            padding: 60px;
-            text-align: left;
-            background: #0394fc;
-            color: white;
-            font-size: 30px;
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0394fc;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
         }
-        .header p {
-            margin: 10px 0;
-            font-size: 20px;
-            color: white;
+        .content {
+            margin-left: 220px;
+            padding: 20px;
         }
-        .header a {
-            color: white;
+
+        .sidebar a {
+            display: block;
+            margin-right: 10px;
+            margin-left: 20px;
+            margin-top: 26px;
             text-decoration: none;
+            color: #ffffff;
         }
-    </style>
+
+        .sidebar a:hover {
+            color: #555;
+        }
+
+        .dummy-content {
+            height: 2000px;
+        }
+</style>
     <link rel="stylesheet" href="style.css" type="text/css">
     <style>
         body {
@@ -29,23 +47,30 @@
             background-attachment: fixed;
             height: 100%;
             width: 100%;
+            background-color: #0371a1;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
 <body>
-<div class="header">
-<text-align: center><h1>DeckMaster</h1>
-        <p><a href="mainpage.php">Home</a></p>
-        <p><a href="Insert_Deck.html">Create Deck</a></p>
-        <p><a href="create_comment.html">Send Feedback</a></p>
-        <p><a href="create_review.html">Make Card Reviews</a></p>
-        <p><a href="all_mainmonsters.php">All Main Deck Monsters</a></p>
-        <p><a href="all_extramonsters.php">All Extra Deck Monsters</a></p>
-        <p><a href="all_spells.php">All Spell Cards</a></p>
-        <p><a href="all_traps.php">All Trap Cards</a></p>
-    </div>
+<div class="sidebar">
+<h2>Deckmaster</h2>
+    <a href="mainpage.php">Home</a>
+    <a href="Insert_Deck.html">Create Deck</a>
+    <a href="create_review.html">Make Card Reviews</a>
+    <a href="create_comment.html">Send Feedback</a>
+    <a href="all_mainmonsters.php">All Main Deck Monsters</a>
+    <a href="all_extramonsters.php">All Extra Deck Monsters</a>
+    <a href="all_spells.php">All Spell Cards</a>
+    <a href="all_traps.php">All Trap Cards</a>
+</div>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <form action="all_reviews.php" method="GET">
   <label for="search_term">Search by Name:</label>
   <input type="text" id="search_term" name="search_term">
